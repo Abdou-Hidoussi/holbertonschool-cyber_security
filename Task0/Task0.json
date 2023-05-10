@@ -1,0 +1,38 @@
+{
+    "Check_Task_file_exist": {
+        "check_file_exist": [
+            [
+                "README.md",
+                null
+            ],
+            [
+                "test.bash",
+                null
+            ]
+        ]
+    },
+    "Check_Task_file_betty": {
+        "check_betty": [
+            [
+                "README.md",
+                null
+            ],
+            [
+                "test.bash",
+                null
+            ]
+        ]
+    },
+    "Check_Content": {
+        "check_file_content": [
+            [
+                "test.bash",
+                "nmap(?=.* -PR)(?=.* -sn)(?=.* \\$1)"
+            ],
+            [
+                "test.bash",
+                "#!/bin/bash\n"
+            ]
+        ]
+    }
+}
