@@ -22,15 +22,22 @@ def check_all(config_file=None,json_file=None):
                     "status": "",
                     "error": "",
                     "desc": "",
+                    "arg": "",
+                    "file": "",
+
                 }
                 response["check"] = check
                 response["desc"] = getattr(module, check).__doc__
                 if not result:
                     response["status"] = "Failed"
+                    response["arg"] = arg
+                    response["file"] = file
                     output.append(response)
                 else:
                     response["status"] = "Success"
                     response["error"] = ""
+                    response["arg"] = arg
+                    response["file"] = file
                     output.append(response)
     json.dump(output, output_file)
     output_file.close()

@@ -4,8 +4,9 @@ def check_file_content(filename, regx):
     """ check if the regex argumant is in the file """
     with open(filename, 'r') as file:
         contents = file.read()
-    pattern = r'{}'.format(regx)
+    pattern = re.compile(regx, re.IGNORECASE | re.MULTILINE | re.DOTALL)
     match = re.search(pattern, contents)
+    print(match)
     if match:
         return True
     else:
