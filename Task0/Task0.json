@@ -6,7 +6,7 @@
                 null
             ],
             [
-                "test.bash",
+                "Task0.bash",
                 null
             ]
         ]
@@ -18,7 +18,7 @@
                 null
             ],
             [
-                "test.bash",
+                "Task0.bash",
                 null
             ]
         ]
@@ -26,11 +26,11 @@
     "Check_Content": {
         "check_file_content": [
             [
-                "test.bash",
+                "Task0.bash",
                 "^nmap(?=.*-sn)(?=.*\\$1)(?=.*-PR)(?:\\s+(?:-sn|-PR|\\$1))+$"
             ],
             [
-                "test.bash",
+                "Task0.bash",
                 "#!/bin/bash\n"
             ]
         ]

@@ -1,7 +1,8 @@
 import importlib
 import json
 
-def check_all(config_file=None,json_file=None):
+def check_all(config_file=None,json_file=None,file_path=None):
+    """ use config json to generat a json file with the status of the checks """
     if (config_file == None):
         return ("please provide a config file for this checker")
     if (json_file == None):
@@ -16,7 +17,7 @@ def check_all(config_file=None,json_file=None):
                 file = conf[0]
                 arg = conf[1]
                 module = importlib.import_module(mod)
-                result = getattr(module, check)(file, arg)
+                result = getattr(module, check)(file_path+"/"+file, arg)
                 response = {
                     "check": "",
                     "status": "",

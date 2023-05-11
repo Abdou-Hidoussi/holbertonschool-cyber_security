@@ -24,6 +24,7 @@ Json Output Structure:
         "check": Check Function Name,
         "status": Success or Failed,
         "error": Error if any,
-        "desc": Description of the check function
+        "desc": Description of the check function,
+        "arg": The provided arguments if any,
     },
 ]
