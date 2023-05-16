@@ -34,5 +34,13 @@
                 "#!/bin/bash\n"
             ]
         ]
+    },
+    "Check_Lines": {
+        "check_line_number": [
+            [
+                "Task0.bash",
+                2
+            ]
+        ]
     }
 }
