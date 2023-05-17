@@ -13,6 +13,7 @@ def check_file_content(filename, regx):
         return False
 
 def check_file_content_compare(filename, filecompare):
+    """ check if two file content are Idedntical """
     with open(filename, "rb") as file_a, open(filecompare, "rb") as file_b: 
         if file_a.read() == file_b.read(): 
             return True
