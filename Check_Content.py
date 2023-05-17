@@ -13,9 +13,9 @@ def check_file_content(filename, regx):
         return False
 
 def check_file_content_compare(filename, filecompare):
-    with open("A", "rb") as file_a, open("B", "rb") as file_b: 
+    with open(filename, "rb") as file_a, open(filecompare, "rb") as file_b: 
         if file_a.read() == file_b.read(): 
-            print("The files are identical.") 
+            return True
         else: 
             xor_result = int.from_bytes(file_a.read()) ^ int.from_bytes(file_b.read())
             if xor_result == 0: 
