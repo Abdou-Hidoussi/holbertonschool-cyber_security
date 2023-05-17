@@ -25,7 +25,6 @@ def check_all(config_file=None,json_file=None,file_path=None):
                     "desc": "",
                     "arg": "",
                     "file": "",
-
                 }
                 response["check"] = check
                 response["desc"] = getattr(module, check).__doc__

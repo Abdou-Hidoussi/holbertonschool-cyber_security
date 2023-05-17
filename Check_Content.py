@@ -1,4 +1,5 @@
 import re
+import difflib
 
 def check_file_content(filename, regx):
     """ check if the regex argumant is in the file """
@@ -10,3 +11,14 @@ def check_file_content(filename, regx):
         return True
     else:
         return False
+
+def check_file_content_compare(filename, filecompare):
+    with open("A", "rb") as file_a, open("B", "rb") as file_b: 
+        if file_a.read() == file_b.read(): 
+            print("The files are identical.") 
+        else: 
+            xor_result = int.from_bytes(file_a.read()) ^ int.from_bytes(file_b.read())
+            if xor_result == 0: 
+                return True
+            else: 
+                return False
