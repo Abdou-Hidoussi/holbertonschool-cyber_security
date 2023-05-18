@@ -35,7 +35,7 @@ def check_all(config_file=None,json_file=None,file_path=None):
                         response["error"] = ""
                         response["arg"] = arg
                         response["file"] = file
-                        if len(conf) >= 3:
+                        if (len(conf) >= 3) and (not result):
                             requirment = False
                         output.append(response)
                     else:

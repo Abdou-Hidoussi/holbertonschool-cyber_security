@@ -38,6 +38,7 @@ def get_content(username, repo_name, file_path):
 
 def save_content(content, file_path):
     """ save provided content into a file """
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
     with open(file_path, 'w+') as file:
         file.write(content)
 
@@ -45,7 +46,7 @@ def check_repo(username, repo_name, file_list, task_list):
     for file in file_list:
         cont = get_content(username, repo_name, file)
         if cont != None:
-            save_content(cont, "download_files/"+file)
+            save_content(cont, "download_files/"+username+"/"+file)
     for task in task_list:
-        check_all(task+"/"+task+".json", "output/"+task, "download_files")
-    del_folder("download_files")
+        check_all(task+"/"+task+".json", "output/"+task, "download_files/"+username)
+    del_folder("download_files/"+username)
