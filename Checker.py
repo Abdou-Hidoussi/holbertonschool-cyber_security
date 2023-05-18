@@ -47,13 +47,14 @@ def save_content(content, file_path):
     with open(file_path, 'w+') as file:
         file.write(content)
 
-def check_repo(username, repo_name, file_list, task_list):
+def check_repo(username, repo_name, folder,file_list, task_list):
+    """ run checker list on a github repo """
     output = {}
     for file in file_list:
         cont = get_content(username, repo_name, file)
         if cont != None:
-            save_content(cont, "download_files/"+username+"/"+repo_name+"/"+file)
+            save_content(cont, "download_files/"+username+"/"+folder+"/"+file)
     for task in task_list:
-        output[task] =  check_all(repo_name+"/"+task+"/"+task+".json", "output/"+username+"/"+repo_name+"/"+task, "download_files/"+username+"/"+repo_name)
-    del_folder("download_files/"+username)
+        output[task] =  check_all(folder+"/"+task+"/"+task+".json", "output/"+username+"/"+folder+"/"+task, "download_files/"+username+"/"+folder)
+    del_folder("download_files/"+username+"/"+folder)
     return output
