@@ -10,8 +10,6 @@ def check_all(config_file=None,json_file=None,file_path=None):
         return ("please provide an output file for this checker")
     config = open(config_file)
     check_list = json.load(config)
-    os.makedirs(os.path.dirname(json_file), exist_ok=True)
-    output_file = open(json_file, 'w+')
     output = []
     requirment = True
     for mod in check_list:
