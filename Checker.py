@@ -49,7 +49,6 @@ def check_repo(username, repo_name, file_list, task_list):
         if cont != None:
             save_content(cont, "download_files/"+username+"/"+repo_name+"/"+file)
     for task in task_list:
-        output[task] =  check_all(task+"/"+task+".json", "output/"+username+"/"+repo_name+"/"+task, "download_files/"+username+"/"+repo_name)
+        output[task] =  check_all(repo_name+"/"+task+"/"+task+".json", "output/"+username+"/"+repo_name+"/"+task, "download_files/"+username+"/"+repo_name)
     del_folder("download_files/"+username)
     return output
-
