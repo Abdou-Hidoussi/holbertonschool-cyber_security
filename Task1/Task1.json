@@ -31,7 +31,7 @@
         "check_line_number": [
             [
                 "Task1.bash",
-                2,
+                3,
                 true
             ]
         ]
