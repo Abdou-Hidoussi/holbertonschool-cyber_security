@@ -3,11 +3,13 @@
         "check_file_exist": [
             [
                 "README.md",
-                null
+                null,
+                true
             ],
             [
                 "Task0.bash",
-                null
+                null,
+                true
             ]
         ]
     },
@@ -15,11 +17,22 @@
         "check_betty": [
             [
                 "README.md",
-                null
+                null,
+                true
             ],
             [
                 "Task0.bash",
-                null
+                null,
+                true
+            ]
+        ]
+    },
+    "Check_Lines": {
+        "check_line_number": [
+            [
+                "Task0.bash",
+                2,
+                true
             ]
         ]
     },
@@ -32,14 +45,6 @@
             [
                 "Task0.bash",
                 "#!/bin/bash\n"
-            ]
-        ]
-    },
-    "Check_Lines": {
-        "check_line_number": [
-            [
-                "Task0.bash",
-                2
             ]
         ]
     }

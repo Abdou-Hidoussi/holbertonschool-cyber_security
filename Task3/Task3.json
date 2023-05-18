@@ -3,11 +3,13 @@
         "check_file_exist": [
             [
                 "README.md",
-                null
+                null,
+                true
             ],
             [
-                "Task0.bash",
-                null
+                "Task3.bash",
+                null,
+                true
             ]
         ]
     },
@@ -15,31 +17,34 @@
         "check_betty": [
             [
                 "README.md",
-                null
+                null,
+                true
             ],
             [
-                "Task0.bash",
-                null
-            ]
-        ]
-    },
-    "Check_Content": {
-        "check_file_content": [
-            [
-                "Task0.bash",
-                "^nmap(?=.*-sn)(?=.*\\$1)(?=.*-PM)(?:\\s+(?:-sn|-PM|\\$1))+$"
-            ],
-            [
-                "Task0.bash",
-                "#!/bin/bash\n"
+                "Task3.bash",
+                null,
+                true
             ]
         ]
     },
     "Check_Lines": {
         "check_line_number": [
             [
-                "Task0.bash",
-                2
+                "Task3.bash",
+                2,
+                true
+            ]
+        ]
+    },
+    "Check_Content": {
+        "check_file_content": [
+            [
+                "Task3.bash",
+                "^nmap(?=.*-sn)(?=.*\\$1)(?=.*-PM)(?:\\s+(?:-sn|-PM|\\$1))+$"
+            ],
+            [
+                "Task3.bash",
+                "#!/bin/bash\n"
             ]
         ]
     }

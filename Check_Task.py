@@ -11,33 +11,44 @@ def check_all(config_file=None,json_file=None,file_path=None):
     check_list = json.load(config)
     output_file = open(json_file, 'w+')
     output = []
+    requirment = True
     for mod in check_list:
         for check in check_list[mod]:
-            for conf in check_list[mod][check]:
-                file = conf[0]
-                arg = conf[1]
-                module = importlib.import_module(mod)
-                result = getattr(module, check)(file_path+"/"+file, arg)
-                response = {
-                    "check": "",
-                    "status": "",
-                    "error": "",
-                    "desc": "",
-                    "arg": "",
-                    "file": "",
-                }
-                response["check"] = check
-                response["desc"] = getattr(module, check).__doc__
-                if not result:
+            if requirment:
+                for conf in check_list[mod][check]:
+                    file = conf[0]
+                    arg = conf[1]
+                    module = importlib.import_module(mod)
+                    result = getattr(module, check)(file_path+"/"+file, arg)
+                    response = {
+                        "check": "",
+                        "status": "",
+                        "error": "",
+                        "desc": "",
+                        "arg": "",
+                        "file": "",
+                    }
+                    response["check"] = check
+                    response["desc"] = getattr(module, check).__doc__
+                    if not result:
+                        response["status"] = "Failed"
+                        response["error"] = ""
+                        response["arg"] = arg
+                        response["file"] = file
+                        if len(conf) >= 3:
+                            requirment = False
+                        output.append(response)
+                    else:
+                        response["status"] = "Success"
+                        response["error"] = ""
+                        response["arg"] = arg
+                        response["file"] = file
+                        output.append(response)
+            else:
                     response["status"] = "Failed"
-                    response["arg"] = arg
-                    response["file"] = file
-                    output.append(response)
-                else:
-                    response["status"] = "Success"
-                    response["error"] = ""
-                    response["arg"] = arg
-                    response["file"] = file
+                    response["arg"] = None
+                    response["file"] = None
+                    response["error"] = "Requirment Fail"
                     output.append(response)
     json.dump(output, output_file)
     output_file.close()
