@@ -2,18 +2,27 @@ Json Configuration Struct:
 
 {    
     "Module Name": {
+
         "Function Name": [
+
             [
                 "File Path",
-                "Argument"
+                "Argument",
+                "True if task is a requirment"
             ],
+
         ]
+
     }
+
 }
 
 Module Name: name of the module that contains the checker function 
+
 Function Name: name of the checker function
+
 File Path: file to check
+
 Argument: argumant if any or None
 
 
