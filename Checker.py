@@ -20,13 +20,18 @@ def get_latest_commit_id(username, repo_name):
     api_url = f"https://api.github.com/repos/{username}/{repo_name}/commits"
     response = requests.get(api_url)
     response_json = response.json()
-    latest_commit = response_json[0]
-    latest_commit_id = latest_commit['sha']
-    return latest_commit_id
+    try:
+        latest_commit = response_json[0]
+        latest_commit_id = latest_commit['sha']
+        return latest_commit_id
+    except :
+        return None
 
 def get_content(username, repo_name, file_path):
     """ get github file by repo username and file path and returns it's content"""
     latest_commit_id = get_latest_commit_id(username, repo_name)
+    if latest_commit_id == None:
+        return None
     api_url = f"https://api.github.com/repos/{username}/{repo_name}/contents/{file_path}?ref={latest_commit_id}"
     headers = {"Accept": "application/vnd.github.VERSION.raw"}
     response = requests.get(api_url, headers=headers)
