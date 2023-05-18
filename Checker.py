@@ -43,10 +43,13 @@ def save_content(content, file_path):
         file.write(content)
 
 def check_repo(username, repo_name, file_list, task_list):
+    output = {}
     for file in file_list:
         cont = get_content(username, repo_name, file)
         if cont != None:
-            save_content(cont, "download_files/"+username+"/"+file)
+            save_content(cont, "download_files/"+username+"/"+repo_name+"/"+file)
     for task in task_list:
-        check_all(task+"/"+task+".json", "output/"+task, "download_files/"+username)
+        output[task] =  check_all(task+"/"+task+".json", "output/"+username+"/"+repo_name+"/"+task, "download_files/"+username+"/"+repo_name)
     del_folder("download_files/"+username)
+    return output
+
