@@ -28,3 +28,10 @@ Json Output Structure:
         "arg": The provided arguments if any,
     },
 ]
+
+use of checker example:
+
+
+task_list = ["Task0", "Task1"]
+file_list = ["README.md", "Task0.bash", "Task1.sh"]
+check_repo("Abdou-Hidoussi", "testing_sc", "0x03_nmap_live_hosts_discovery", file_list, task_list)
