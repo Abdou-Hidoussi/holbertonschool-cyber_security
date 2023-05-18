@@ -7,7 +7,7 @@
                 true
             ],
             [
-                "Task2.bash",
+                "Task2.sh",
                 null,
                 true
             ]
@@ -21,7 +21,7 @@
                 true
             ],
             [
-                "Task2.bash",
+                "Task2.sh",
                 null,
                 true
             ]
@@ -30,7 +30,7 @@
     "Check_Lines": {
         "check_line_number": [
             [
-                "Task2.bash",
+                "Task2.sh",
                 3,
                 true
             ]
@@ -39,11 +39,11 @@
     "Check_Content": {
         "check_file_content": [
             [
-                "Task2.bash",
+                "Task2.sh",
                 "^nmap(?=.*-sn)(?=.*\\$1)(?=.*-PP)(?:\\s+(?:-sn|-PP|\\$1))+$"
             ],
             [
-                "Task2.bash",
+                "Task2.sh",
                 "#!/bin/bash\n"
             ]
         ]

@@ -7,7 +7,7 @@
                 true
             ],
             [
-                "Task4.bash",
+                "Task4.sh",
                 null,
                 true
             ]
@@ -21,7 +21,7 @@
                 true
             ],
             [
-                "Task4.bash",
+                "Task4.sh",
                 null,
                 true
             ]
@@ -30,7 +30,7 @@
     "Check_Lines": {
         "check_line_number": [
             [
-                "Task4.bash",
+                "Task4.sh",
                 3,
                 true
             ]
@@ -39,11 +39,11 @@
     "Check_Content": {
         "check_file_content": [
             [
-                "Task4.bash",
+                "Task4.sh",
                 "^nmap(?=.*-sn)(?=.*\\$1)(?=.*-PS22,80,443)(?:\\s+(?:-sn|-PS22,80,443|\\$1))+$"
             ],
             [
-                "Task4.bash",
+                "Task4.sh",
                 "#!/bin/bash\n"
             ]
         ]

@@ -7,7 +7,7 @@
                 true
             ],
             [
-                "Task3.bash",
+                "Task3.sh",
                 null,
                 true
             ]
@@ -21,7 +21,7 @@
                 true
             ],
             [
-                "Task3.bash",
+                "Task3.sh",
                 null,
                 true
             ]
@@ -30,7 +30,7 @@
     "Check_Lines": {
         "check_line_number": [
             [
-                "Task3.bash",
+                "Task3.sh",
                 3,
                 true
             ]
@@ -39,11 +39,11 @@
     "Check_Content": {
         "check_file_content": [
             [
-                "Task3.bash",
+                "Task3.sh",
                 "^nmap(?=.*-sn)(?=.*\\$1)(?=.*-PM)(?:\\s+(?:-sn|-PM|\\$1))+$"
             ],
             [
-                "Task3.bash",
+                "Task3.sh",
                 "#!/bin/bash\n"
             ]
         ]
