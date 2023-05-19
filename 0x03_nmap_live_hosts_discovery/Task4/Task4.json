@@ -7,7 +7,7 @@
                 true
             ],
             [
-                "Task4.sh",
+                "4-tcp_syn_ping.sh",
                 null,
                 true
             ]
@@ -21,7 +21,7 @@
                 true
             ],
             [
-                "Task4.sh",
+                "4-tcp_syn_ping.sh",
                 null,
                 true
             ]
@@ -30,7 +30,7 @@
     "Check_Lines": {
         "check_line_number": [
             [
-                "Task4.sh",
+                "4-tcp_syn_ping.sh",
                 3,
                 true
             ]
@@ -39,11 +39,11 @@
     "Check_Content": {
         "check_file_content": [
             [
-                "Task4.sh",
+                "4-tcp_syn_ping.sh",
                 "^nmap(?=.*-sn)(?=.*\\$1)(?=.*-PS22,80,443)(?:\\s+(?:-sn|-PS22,80,443|\\$1))+$"
             ],
             [
-                "Task4.sh",
+                "4-tcp_syn_ping.sh",
                 "#!/bin/bash\n"
             ]
         ]
