@@ -1,0 +1,233 @@
+[
+	{
+	    "repo": "holbertonschool-cyber_security",
+	    "directory": "network_security/0x03_nmap_live_hosts_discovery",
+	    "file": "0-arp_scan.sh",
+	    "conditions": {
+            "Check_Task_file_exist": {
+                "check_file_exist": [
+                    [
+                        null,
+                        true
+                    ]
+                ]
+            },
+            "Check_Lines": {
+                "check_line_number": [
+                    [
+                        3,
+                        true
+                    ]
+                ]
+            },
+            "Check_Content": {
+                "check_file_content": [
+                    [
+                        "\nsudo nmap(?=.*-sn)(?=.*\\$1)(?=.*-PR)(?:\\s+(?:-sn|-PR|\\$1))+$"
+                    ],
+                    [
+                        "#!/bin/bash\n"
+                    ]
+                ]
+            }
+        }
+	},
+	{
+	    "repo": "holbertonschool-cyber_security",
+	    "directory": "network_security/0x03_nmap_live_hosts_discovery",
+	    "file": "1-icmp_echo_scan.sh",
+	    "conditions": {
+            "Check_Task_file_exist": {
+                "check_file_exist": [
+                    [
+                        null,
+                        true
+                    ]
+                ]
+            },
+            "Check_Lines": {
+                "check_line_number": [
+                    [
+                        3,
+                        true
+                    ]
+                ]
+            },
+            "Check_Content": {
+                "check_file_content": [
+                    [
+                        "\nsudo nmap(?=.*-sn)(?=.*\\$1)(?=.*-PE)(?:\\s+(?:-sn|-PE|\\$1))+$"
+                    ],
+                    [
+                        "#!/bin/bash\n"
+                    ]
+                ]
+            }
+        }
+	},
+	{
+	    "repo": "holbertonschool-cyber_security",
+	    "directory": "network_security/0x03_nmap_live_hosts_discovery",
+	    "file": "2-icmp_timestamp_scan.sh",
+	    "conditions": {
+            "Check_Task_file_exist": {
+                "check_file_exist": [
+                    [
+                        null,
+                        true
+                    ]
+                ]
+            },
+            "Check_Lines": {
+                "check_line_number": [
+                    [
+                        3,
+                        true
+                    ]
+                ]
+            },
+            "Check_Content": {
+                "check_file_content": [
+                    [
+                        "\nsudo nmap(?=.*-sn)(?=.*\\$1)(?=.*-PP)(?:\\s+(?:-sn|-PP|\\$1))+$"
+                    ],
+                    [
+                        "#!/bin/bash\n"
+                    ]
+                ]
+            }
+        }
+	},
+	{
+	    "repo": "holbertonschool-cyber_security",
+	    "directory": "network_security/0x03_nmap_live_hosts_discovery",
+	    "file": "3-icmp_address_mask_scan.sh",
+	    "conditions": {
+			"Check_Task_file_exist": {
+				"check_file_exist": [
+					[
+						null,
+						true
+					]
+				]
+			},
+			"Check_Lines": {
+				"check_line_number": [
+					[
+						3,
+						true
+					]
+				]
+			},
+			"Check_Content": {
+				"check_file_content": [
+					[
+						"\nsudo nmap(?=.*-sn)(?=.*\\$1)(?=.*-PM)(?:\\s+(?:-sn|-PM|\\$1))+$"
+					],
+					[
+						"#!/bin/bash\n"
+					]
+				]
+			}
+		}
+	},
+	{
+	    "repo": "holbertonschool-cyber_security",
+	    "directory": "network_security/0x03_nmap_live_hosts_discovery",
+	    "file": "4-tcp_syn_ping.sh",
+	    "conditions": {
+			"Check_Task_file_exist": {
+				"check_file_exist": [
+					[
+						null,
+						true
+					]
+				]
+			},
+			"Check_Lines": {
+				"check_line_number": [
+					[
+						3,
+						true
+					]
+				]
+			},
+			"Check_Content": {
+				"check_file_content": [
+					[
+						"\nsudo nmap(?=.*-sn)(?=.*\\$1)(?=.*-PS22,80,443)(?:\\s+(?:-sn|-PS22,80,443|\\$1))+$"
+					],
+					[
+						"#!/bin/bash\n"
+					]
+				]
+			}
+		}
+	},
+	{
+	    "repo": "holbertonschool-cyber_security",
+	    "directory": "network_security/0x03_nmap_live_hosts_discovery",
+	    "file": "5-tcp_ack_ping.sh",
+	    "conditions": {
+			"Check_Task_file_exist": {
+				"check_file_exist": [
+					[
+						null,
+						true
+					]
+				]
+			},
+			"Check_Lines": {
+				"check_line_number": [
+					[
+						3,
+						true
+					]
+				]
+			},
+			"Check_Content": {
+				"check_file_content": [
+					[
+						"\nsudo nmap(?=.*-sn)(?=.*\\$1)(?=.*-PA22,80,443)(?:\\s+(?:-sn|-PA22,80,443|\\$1))+$"
+					],
+					[
+						"#!/bin/bash\n"
+					]
+				]
+			}
+		}
+	},
+	{
+	    "repo": "holbertonschool-cyber_security",
+	    "directory": "network_security/0x03_nmap_live_hosts_discovery",
+	    "file": "6-udp_ping_scan.sh",
+	    "conditions": {
+			"Check_Task_file_exist": {
+				"check_file_exist": [
+					[
+						null,
+						true
+					]
+				]
+			},
+			"Check_Lines": {
+				"check_line_number": [
+					[
+						3,
+						true
+					]
+				]
+			},
+			"Check_Content": {
+				"check_file_content": [
+					[
+						"\nsudo nmap(?=.*-sn)(?=.*\\$1)(?=.*-PU53,161,162)(?:\\s+(?:-sn|-PU53,161,162|\\$1))+$"
+					],
+					[
+						"#!/bin/bash\n"
+					]
+				]
+			}
+		}
+	}
+]

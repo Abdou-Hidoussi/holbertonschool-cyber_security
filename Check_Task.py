@@ -61,33 +61,28 @@ def check_file(json_tasks=None, file_content=None):
                 response = {
                     "check": check,
                     "status": "",
-                    "error": "",
+                    "msg": "",
                     "desc": getattr(module, check).__doc__,
                     "arg": "",
-                    "file": "",
                 }
                 if requirment:
-                    file = conf[0]
-                    arg = conf[1]
+                    arg = conf[0]
                     result = getattr(module, check)(file_content, arg)
                     if not result:
-                        response["status"] = "Failed"
-                        response["error"] = ""
+                        response["status"] = False
+                        response["msg"] = ""
                         response["arg"] = arg
-                        response["file"] = file
-                        if (len(conf) >= 3) and (not result):
+                        if (len(conf) >= 2) and (not result):
                             requirment = False
                         output.append(response)
                     else:
-                        response["status"] = "Success"
-                        response["error"] = ""
+                        response["status"] = True
+                        response["msg"] = ""
                         response["arg"] = arg
-                        response["file"] = file
                         output.append(response)
                 else:
-                    response["status"] = "Failed"
+                    response["status"] = False
                     response["arg"] = None
-                    response["file"] = None
-                    response["error"] = "Requirment Fail"
+                    response["msg"] = "Requirment Fail"
                     output.append(response)
     return output
